@@ -1,0 +1,119 @@
+:root {
+    --purp: #923adf;
+    --orange: #df733a;
+    --blue: #3ad1df;
+    --yellow: #dcdf3a;
+  }
+
+  img {
+    width:100%;
+    max-width: 600px;
+    padding: .1rem;
+    border: 1rem var(--yellow) solid;
+      
+  }
+  
+  #page {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 2fr 5%;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    grid-template-rows: 1fr 4fr 4fr 4fr;
+    grid-template-areas: "top top top top"
+                         "side bio bio d"
+                         "side gal gal d"
+                         "side hmu hmu d";
+}
+
+  
+ .top {
+    grid-area: top;
+    background-color: var(--purp);
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top .navbar> ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: right;
+    margin-right: 2rem;
+  }
+
+ .side {
+    grid-area: side;
+    background-color: var(--orange);
+  }
+
+  .side {
+    
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: right;
+    
+  }
+
+  .navbar{
+    display: inline-block;
+  }
+
+  .side h3{
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+  }
+  
+.side h3:hover{
+  border: .7rem var(--yellow);
+  border-style: outset hidden hidden inset;
+  color: var(--blue)
+}
+
+  .bio {
+    grid-area: bio;
+    background-color: var(--blue);
+  }
+
+  .bio {
+    padding: 2rem;
+    display:inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+  }
+
+  figcaption {
+    text-align: right;
+    
+  }
+
+  .bio p {
+    text-align: center;
+    max-width: 40%;
+    margin: 7rem;
+  }
+ 
+
+  #page .gal {
+    grid-area: gal;
+    background-color: var(--blue);
+    display:flex;
+  }
+  
+  #page .hmu {
+    grid-area: hmu;
+    background-color: var(--blue);
+  }
+
+  
+
+  h2 {
+    flex-basis: 100%;
+    text-align: center;
+    justify-self: center;
+    text-decoration-color: var(--purp);
+  }
